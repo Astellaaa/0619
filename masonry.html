@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: gray;
+        }
+        .box {
+            background-color: black;
+            margin: 5px;
+        }
+    </style>
+    <script src="unpkg.com_masonry-layout@4.2.2_dist_masonry.pkgd.min.js"></script>
+    <script src="../js/jquery-3.7.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            for(var i = 0; i < 100; i++){
+                $("<div><img id='img1' src='imgs/"+(i % 8)+".png'></div>").addClass("box")
+                                .css({
+                                    width: 100,
+                                    height: Math.floor(Math.random() * 100) + 50
+                                })
+                                .appendTo("body");
+
+                                $("img#img1").css({
+                    width: 100,
+                    height: h
+                });
+            }
+            $("body").masonry({
+                columnWidth: 110
+            });
+
+
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
